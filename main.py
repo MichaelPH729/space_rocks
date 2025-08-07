@@ -1,5 +1,7 @@
 import pygame
 from constants import *
+clock = pygame.time.Clock()
+dt = 0
 
 def main():
     pygame.init()
@@ -12,6 +14,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill("black")
+        clock.tick(60)
         pygame.display.flip()
 
 if __name__ == "__main__":
